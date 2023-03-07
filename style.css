@@ -1,0 +1,373 @@
+@font-face {
+  font-family: "Century Gothic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Century Gothic"),
+       url("/fonts/centurygothic.ttf") format("ttf"),
+       url("/fonts/centurygothic_bold.ttf") format("ttf"),
+}
+
+/* ! СОЗДАНИЕ ПЕРЕМЕННЫХ в CSS */
+:root {
+  /* Цветовая схема */
+  --primary-color: #181818;
+  --secondary-color: #3daa3d;
+  --light-color: #ffffff;
+  --card-color:#aeaeae;
+
+  /* Размер шрифтов */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  /* ! ИСПОЛЬЗОВАНИЕ ПЕРЕМЕННЫХ */
+  background-color: var(--primary-color);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Century Gothic', sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-color);;
+  height: 100vh; /* Выравнивание контейнера по центру по вертикали на всю высоту страницы */
+}
+
+.container {
+  width: 1600px;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.header-btn button {
+  margin-left: 20px;
+}
+
+.hero-section {
+  position: relative;
+}
+
+.hero-section img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item {
+  padding: 10px;
+  margin-right: 60px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.menu-item {
+  position: relative;
+  text-decoration: none;
+}
+
+.menu-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-item:hover::after {
+  transform: scaleX(1);
+}
+
+.header-btn button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  color: #000;
+  background-color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header-btn button:hover {
+  background-color: var(--secondary-color);
+}
+
+.hero-section {
+  background-image: url("image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.bg {
+  background-image: url("bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-color);;
+  z-index: -2;
+}
+
+.hero-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section img {
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text {
+  flex: 1;
+  color: #fff;
+  padding: 0 50px;
+  text-align: center;
+}
+
+.logo,
+.header-btn,
+.menu {
+  flex: 1;
+}
+
+.header-btn {
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+}
+
+.circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background-color: var(--secondary-color);;
+  border-radius: 50%;
+  z-index: 0; /* задаем z-index, чтобы круг был на заднем плане */
+}
+
+.hero-line {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first-line {
+  display: flex;
+  color: #fff;
+  align-items: center;
+}
+
+.hero-about {
+  padding-left: 70px;
+  width: 350px;
+  color: #fff;
+}
+.hero-tran {
+  /* writing-mode: vertical-lr; */
+  /* text-orientation: upright; */
+  transform: rotate(-90deg);
+  margin-right: 100px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  color: #000;
+  background-color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-color);;
+}
+
+.hero-btn {
+  margin-top: 15px;
+}
+
+.hero-btn > button {
+  background-color: var(--secondary-color);;
+  margin-right: 15px;
+}
+
+.hero-btn > button:hover {
+  background-color: #ffffff;
+}
+
+.green-dot {
+  font-size: 28px;
+  color: var(--secondary-color);;
+}
+
+.tips-block {
+  position: absolute;
+  top: 180px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 1px solid white;
+  text-align: center;
+  line-height: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: transparent;
+  color: #fff;
+  z-index: 4;
+}
+
+.tips-block:hover {
+  cursor: pointer;
+  border: 1px solid var(--secondary-color);;
+  transition: border 0.5s ease;
+}
+
+.hero-info {
+  background-color: var(--primary-color);;
+  width: 100%;
+  height: 170px;
+  margin-top: -170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: #fff 2px solid;
+  border-top: #fff 2px solid;
+  color: #fff;
+  z-index: 100;
+}
+
+.content-tran {
+  height: 350px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  text-align: justify;
+}
+
+.card {
+  border: var(--secondary-color) 3px dashed;
+  width: 800px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.card img {
+  margin-right: 50px;
+}
+
+.card .imgr {
+  margin-right: 0px;
+  margin-left: 50px;
+}
+
+#scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  display: none;
+}
+
+#scroll-to-top.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.1);
+}
+
+#scroll-to-top:hover {
+  background-color: #fff;
+}
